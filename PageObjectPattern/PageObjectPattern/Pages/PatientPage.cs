@@ -27,7 +27,6 @@ namespace PageObjectPattern.Pages
             _driver.FindElement(By.XPath("//a[@id='org.openmrs.module.coreapps.deletePatient']")).Click();
             Thread.Sleep(1000);
             _driver.FindElement(By.XPath("//div[@id='delete-patient-creation-dialog'][1]/div[@class='dialog-content'][1]/button[@class='confirm right'][1]")).Click();
-            Thread.Sleep(1000);
 
             return _driver.FindElement(By.XPath("//div[@id='delete-patient-creation-dialog'][1]/div[@class='dialog-content']/h6[@id='delete-reason-empty']")).Text;
         }
